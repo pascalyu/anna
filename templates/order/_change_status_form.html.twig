@@ -1,0 +1,11 @@
+<form method="post" action="{{ path('change_status', {'id': order.id}) }}" onsubmit="return confirm('Confirmez vous son nouveau status?');">
+	<input type="hidden" name="_method" value="POST">
+	<div class="form-group form-group-lg">
+		<select id="status" class="form-control col-md-3" name="_status">
+			<option {{ order.status == 'WAITING_CONFIRM' ? 'selected' }} value="WAITING_CONFIRM">En Attente de confirmation</option>
+			<option {{ order.status == 'SEND' ? 'selected' }} value="SEND">Envoyé</option>
+			<option {{ order.status == 'RECEIVE' ? 'selected' }} value="RECEIVE">Réceptionné</option>
+		</select>
+		<button class="btn btn-warning ">Confirmer</button>
+	</div>
+</form>

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Order
+{% endblock %}
+
+{% block body %}
+	<h1>Edit Order</h1>
+
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	<a href="#" class="js-genus-scientist-add">
+		<span class="fa fa-plus-circle"></span>
+		Add Another Scientist
+	</a>
+	<button class="btn">{{ button_label|default('Save') }}</button>
+	{{ form_end(form) }}
+
+
+{% endblock %}

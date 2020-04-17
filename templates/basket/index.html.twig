@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Basket index{% endblock %}
+
+{% block body %}
+    <h1>Basket index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for basket in baskets %}
+            <tr>
+                <td>{{ basket.id }}</td>
+                <td>{{ basket.price }}</td>
+                <td>{{ basket.quantity }}</td>
+                <td>
+                    <a href="{{ path('basket_show', {'id': basket.id}) }}">show</a>
+                    <a href="{{ path('basket_edit', {'id': basket.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('basket_new') }}">Create new</a>
+{% endblock %}

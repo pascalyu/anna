@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product
+{% endblock %}
+
+{% block body %}
+	<a href="{{ path('home') }}">Revenir à la liste des produits</a>
+	<div class="row">
+		<div class="col-md-9">
+			<div class="border p-3">
+
+				<div class="row">
+					<div class="row col-md-6" style="text-align:center">
+						{% for picture in product.pictures %}
+							<div class="col-md-6">
+								<img class="  border rounded border-dark" src="/images/products/{{picture.name}}" style="max-width:100%"/>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="col-md-6">
+						<div style="text-align:center">
+							<h4>{{product.name}}</h4>
+						</div>
+						<div>
+							<b>Prix :</b>
+							<span class"color-red">
+								{{product.price}}
+								euros</span>
+						</div>
+						<div>
+							<b>Quantité en stock :</b>
+							<span class"color-red">
+								{{product.quantity}}
+							</span>
+						</div>
+
+						<div>
+							<b>Description du produit
+							</b>
+							<div>{{product.description}}</div>
+						</div>
+						<hr/>
+
+						{{form_start(addToBasketform)}}
+						{{form_end(addToBasketform)}}
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="border border-dark rounded p-1">
+				<div style="text-align:center">
+					<h5>Panier</h5>
+
+				</div>
+				<div>
+					{{ render(controller(
+        'App\\Controller\\BasketController::basketWidget'
+    )) }}
+					<button class="form-control btn btn-warning mt-3">Commander
+						<i class=" fas fa-shopping-cart"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

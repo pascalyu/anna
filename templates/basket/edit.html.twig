@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Basket{% endblock %}
+
+{% block body %}
+    <h1>Edit Basket</h1>
+
+    {{ include('basket/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('basket_index') }}">back to list</a>
+
+    {{ include('basket/_delete_form.html.twig') }}
+{% endblock %}

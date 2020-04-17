@@ -1,0 +1,21 @@
+{% for basket in baskets %}
+	<div>
+		<a href="#">{{ basket.product.name}}</a>
+		<span>x</span>
+		<span>{{basket.quantity}}</span>
+	</div>
+	<hr/>
+
+{% else %}
+
+	<div>Pas de produits selectionnés</div>
+
+{% endfor %}
+<div>
+	<div>Nombre d'articles :{{nbrArticle}}
+	</div>
+	<div>Total :
+		<b>{{total}}
+			euros</b>
+	</div>
+</div>

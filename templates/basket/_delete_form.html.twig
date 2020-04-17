@@ -1,0 +1,6 @@
+<form method="post" action="{{ path('basket_delete', {'id': basket.id}) }}" onsubmit="return confirm('Voulez vous vraiment enlever l\'article du panier?');">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ basket.id) }}">
+	<button class="btn btn-danger"><i class="fas fa-trash"></i>
+	</button>
+</form>

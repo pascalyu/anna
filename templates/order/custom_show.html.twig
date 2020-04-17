@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order
+{% endblock %}
+
+{% block body %}
+	<h1>Mes commandes
+	</h1>
+	{% for order in orders %}
+		<div class="card p-3 mb-2 border rounded border-dark">
+			<div class="mb-3">
+				<h6>Commande n°{{ order.codeNumber}}</h6>
+				<div>{{order.price}}
+					euros</div>
+				<div>{{order.status}}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h6>Adresse de livraison</h6>
+					<div>
+						<div>{{ order.shippingAddress.name}}</div>
+						<div>{{ order.shippingAddress.streetName}}</div>
+						<div>{{ order.shippingAddress.zipCode}}
+							{{ order.shippingAddress.city}}</div>
+						<div>{{ order.shippingAddress.country}}</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h6>Adresse de facturation</h6>
+					<div>
+						<div>{{ order.billingAddress.name}}</div>
+						<div>{{ order.billingAddress.streetName}}</div>
+						<div>{{ order.billingAddress.zipCode}}
+							{{ order.billingAddress.city}}</div>
+						<div>{{ order.billingAddress.country}}</div>
+					</div>
+				</div>
+			</div>
+			<a  href="#collapse-{{order.id}}" role="button" aria-expanded="false" aria-controls="collapse-{{order.id}}" data-toggle="collapse" data-target="#collapse-{{order.id}}" class="btn form-control">
+				<i class="fas fa-chevron-down"></i>
+			</a>
+			<hr/>
+			<div class="" id="collapse-{{order.id}}">
+				<h6>Détails de la commande</h6>
+				{% for orderProduct in order.orderProduct %}
+					<div class="row">
+						<div class="col-md-2" style="height:auto">
+							<img class=" border rounded m-1" style=" width:100%" src="/images/products/{{orderProduct.product.picture.name}}">
+						</div>
+						<div class="col-md-10">
+							<h6>{{orderProduct.product.name}}
+							</h6>
+							<div>{{orderProduct.product.description}}
+							</div>
+							<div>Quantité :
+								{{orderProduct.quantity}}
+							</div>
+							<div>
+								prix du lot:
+								{{orderProduct.price}}
+								euros</div>
+						</div>
+					</div>
+					<hr/>
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+
+{% endblock %}

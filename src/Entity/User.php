@@ -69,8 +69,6 @@ class User implements UserInterface
         $this->products = new ArrayCollection();
         $this->orders = new ArrayCollection();
         $this->baskets = new ArrayCollection();
-        $this->shipping_address = new ArrayCollection();
-        $this->billing_address = new ArrayCollection();
     }
 
     public function getId(): ?int

@@ -2,7 +2,7 @@
 ## Introduction
 
 Anna est un site e-commerce développé en symfony. Vous pouvez trouver le site sur https://wnaythzwvq-bemh5cfa4d2bc.eu.s5y.io/. 
-Le challenge était de créer ce genre de site en une semaine.
+Le challenge était de créer ce genre de site en **une semaine**.
 Je vais vous présenter ici les fonctionnalités principaux , et la roadmap d'une semaine pour concevoir le site.
 
 ## Fonctionnalités
@@ -11,6 +11,9 @@ Je vais vous présenter ici les fonctionnalités principaux , et la roadmap d'un
 * Liste des produits
 * création d'un produit -> plusieurs images
 * Recherche produit
+* Avoir un panier
+* créer et vendre ses produits
+* Passer des commandes , et les consulter
 ## Roadmap
 ### Samedi 11 - architecture
 * Recherche d'un projet ->site e-commerce
@@ -21,8 +24,8 @@ Je vais vous présenter ici les fonctionnalités principaux , et la roadmap d'un
 * création de ses entités en code et tables
 ### Dimanche 12 - crud et dashboard admin 
 * utilisation du crud pour ses entités 
-* Création Dashboard Admin -> accès aux différent crud
-* réation du login et inscription via symfony
+* Création Dashboard Admin -> accès aux différent **CRUD**
+* réation du login et inscription *via symfony*
 ### Lundi 13 - utilisateur admin, produits et images
 * Gestion des users, notamment possibilité de donner admin 
 * Affichage de la liste des produits
@@ -52,10 +55,10 @@ Je vais vous présenter ici les fonctionnalités principaux , et la roadmap d'un
 ** consulter les commandes
 ** changer status commande			
 ### Vendredi 17 - déploiement
-* appréhender le symfony cloud
+* appréhender le **Symfony Cloud**
 * déploiement
 * mini debug
 * traduction certaines pages en français
 ### Samedi 18/04 -documentation , remplir le site
-* Documenté via un readme
+* Documenté via un **readme.md**
 * rajout de contenu sur le site

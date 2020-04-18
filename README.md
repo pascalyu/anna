@@ -7,9 +7,8 @@ Le challenge était de créer ce genre de site en **une semaine**.
 Je vais vous présenter ici les fonctionnalités principaux , et la roadmap d'une semaine pour concevoir le site.
 
 ## Connexion
-
-email:invit@yopmail.Com
-mdp:testtest
+* email:invit@yopmail.Com
+* mdp:testtest
 
 ## Fonctionnalités
 

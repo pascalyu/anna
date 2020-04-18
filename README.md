@@ -1,9 +1,15 @@
 # Anna
+
 ## Introduction
 
 Anna est un site **e-commerce** développé en **Symfony**. Vous pouvez trouver le site sur https://wnaythzwvq-bemh5cfa4d2bc.eu.s5y.io/. 
 Le challenge était de créer ce genre de site en **une semaine**.
 Je vais vous présenter ici les fonctionnalités principaux , et la roadmap d'une semaine pour concevoir le site.
+
+## Connexion
+
+email:invit@yopmail.Com
+mdp:testtest
 
 ## Fonctionnalités
 

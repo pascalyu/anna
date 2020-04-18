@@ -24,6 +24,7 @@ disk: 512
 
 mounts:
     "/var": { source: local, source_path: var }
+    "/public/images/products": {source: local, source_path: products}
 
 hooks:
     build: |

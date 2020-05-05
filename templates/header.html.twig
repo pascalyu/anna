@@ -9,7 +9,7 @@
 
 	<div class="container font-color-in-div">
 		<div class="navbar-header">
-			<a href="{{ path('home') }}" class="navbar-brand">
+			<a href="{{ path('home') }}" class="navbar-brand fontSecondaryColor">
 				<i class="fas fa-leaf"></i>
 				Anna</a>
 		</div>
@@ -60,12 +60,12 @@
 
 			<ul class="nav navbar-nav">
 				<li class="mr-2">
-					<a href="{{ path('app_register')}}">Inscription
+					<a class="btn border rounded borderSecondaryColor" href="{{ path('app_register')}}">Inscription
 					</a>
 				</li>
 
 				<li class="">
-					<a href="{{ path('app_login')}}">Login</a><li/>
+					<a class="btn border rounded borderSecondaryColor" href="{{ path('app_login')}}">Login</a><li/>
 				</li>
 			</ul>
 		{% endif %}

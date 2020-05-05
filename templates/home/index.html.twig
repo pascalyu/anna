@@ -6,7 +6,7 @@
 {% block body %}
 	<div class="row">
 		<div class="col-md-2">
-			<div class="border card border-dark mt-3 p-1">
+			<div class="border-right mt-3 pr-3">
 				{{ form_start(form) }}
 				<button type="button" class="btn">
 					<a href='{{path('home')}}'>
@@ -18,25 +18,19 @@
 				{{ form_end(form) }}
 			</div>
 		</div>
-		<div class="row  col-md-10">
+		<div class="row col-md-10">
 			{% for product in products %}
 				<div class="col-md-3 mt-3 ">
-					<div class="card ">
-						<div class="card-header">
-							<span>
-								{{product.name}}
-							</span>
-							<span style="float:right">{{product.price}}
-								€</span>
-						</div>
-						<div class="card-body" style="">
+					<div class="card card-to-hover">
+
+						<a href="{{path('product_custom_show',{'id': product.id})}}" class="" style="">
 							<div style="text-align:center">
-								<img src="images/products/{{product.picture.name}}" style="max-width:100%;height:140px"/>
+								<img src="images/products/{{product.picture.name}}" style="max-width:100%;height:150px"/>
 							</div>
-							<div>
-								{{product.description}}</div>
-						</div>
-						<a href="{{path('product_custom_show',{'id': product.id})}}" class="card-footer">Voir le produit</a>
+
+						</a>
+						<a href="{{path('product_custom_show',{'id': product.id})}}" class="card-footer card-center-footer fontSecondaryColor">{{ product.price}}
+							euros</a>
 					</div>
 				</div>
 			{% endfor %}

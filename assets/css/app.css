@@ -14,10 +14,47 @@ body {
     background-color: var(--main-bg-color);
 }
 
+.secondaryColor {
+    background-color: var(--secondary-bg-color);
+}
+
+.borderSecondaryColor {
+    border-color: var(--secondary-bg-color) !important;
+}
+
+.fontSecondaryColor {
+    color: var(--secondary-bg-color);
+}
+
 .navbar a {
     color: white;
 }
 
 .navbar a:hover {
     color: var(--secondary-bg-color);
+}
+
+.myfooter div {
+    color: white;
+}
+
+.myfooter div a {
+    color: white;
+}
+
+.card-center-footer {
+    text-align: center;
+}
+
+.card-to-hover:hover .card-footer{
+    background-color: var(--main-bg-color) !important;
+    color:white ! important
+}
+
+
+
+.myfooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

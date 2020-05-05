@@ -12,11 +12,13 @@
 	</head>
 	<body>
 		{% include "header.html.twig" %}
-		<div class="container"> {% block body %}{% endblock %}
+		<div class="container wrapper"> {% block body %}{% endblock %}
 			</div>
 			{% block javascripts %}
 				{{ encore_entry_script_tags('app') }}
 			{% endblock %}
-			{% include "footer.html.twig" %}
+
 		</body>
+		<div class="push"></div>
+		{% include "footer.html.twig" %}
 	</html>

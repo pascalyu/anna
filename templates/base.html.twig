@@ -11,14 +11,18 @@
 		{% endblock %}
 	</head>
 	<body>
-		{% include "header.html.twig" %}
-		<div class="container wrapper"> {% block body %}{% endblock %}
+		<div class="wrapper">
+			{% include "header.html.twig" %}
+			<div class="container content">
+				<div>
+					{% block body %}{% endblock %}
+				</div>
 			</div>
-			{% block javascripts %}
-				{{ encore_entry_script_tags('app') }}
-			{% endblock %}
-
-		</body>
-		<div class="push"></div>
-		{% include "footer.html.twig" %}
-	</html>
+			<div class="pusher"></div>
+			{% include "footer.html.twig" %}
+		</div>
+	</body>
+	{% block javascripts %}
+		{{ encore_entry_script_tags('app') }}
+	{% endblock %}
+</html>

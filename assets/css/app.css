@@ -4,10 +4,31 @@
 }
 
 body {
-    margin: 0 auto;
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     color: #567;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    /* real browsers */
+    position: relative;
+}
+
+.content {
+    height: 100%;
+    padding-bottom: 10%;
+}
+
+.myfooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 }
 
 .primaryColor {
@@ -46,15 +67,7 @@ body {
     text-align: center;
 }
 
-.card-to-hover:hover .card-footer{
+.card-to-hover:hover .card-footer {
     background-color: var(--main-bg-color) !important;
-    color:white ! important
-}
-
-
-
-.myfooter {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    color: white ! important
 }

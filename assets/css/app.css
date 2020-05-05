@@ -3,19 +3,35 @@
     --secondary-bg-color: #b34151;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     color: #567;
     margin: 0;
     padding: 0;
+    margin-bottom: 150px;
     height: 100%;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    /* Set the fixed height of the footer here */
+    /* Vertically center the text there */
+}
+
+/*
 .wrapper {
     min-height: 100%;
     height: auto !important;
-    /* real browsers */
+   
     position: relative;
 }
 
@@ -29,7 +45,7 @@ body {
     bottom: 0;
     width: 100%;
     left: 0;
-}
+}*/
 
 .primaryColor {
     background-color: var(--main-bg-color);
@@ -55,11 +71,11 @@ body {
     color: var(--secondary-bg-color);
 }
 
-.myfooter div {
+.footer div {
     color: white;
 }
 
-.myfooter div a {
+.footer div a {
     color: white;
 }
 

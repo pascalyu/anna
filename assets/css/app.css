@@ -1,3 +1,23 @@
+:root {
+    --main-bg-color: #41B3A3;
+    --secondary-bg-color: #b34151;
+}
 
+body {
+    margin: 0 auto;
+    font-family: "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    color: #567;
+}
 
-hr{ border: none;height: 1px;color: #333;  background-color: #333;}
+.primaryColor {
+    background-color: var(--main-bg-color);
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: var(--secondary-bg-color);
+}

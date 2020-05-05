@@ -5,23 +5,26 @@
 	}
 </style>
 
-<nav class="navbar navbar-expand-lg">
-	<div class="container  border rounded rounded-lg border-info">
+<nav class="navbar navbar-expand-lg border  primaryColor ">
+
+	<div class="container font-color-in-div">
 		<div class="navbar-header">
 			<a href="{{ path('home') }}" class="navbar-brand">
-				<i class="fas fa-home"></i> Anna</a>
+				<i class="fas fa-leaf"></i>
+				Anna</a>
 		</div>
 
 
 		{% if app.user %}
 			{% if is_granted('ROLE_ADMIN') %}
-				<a href="{{path("dashboard_admin")}}">Dashboard Admin</a>
+				<a href="#">Dashboard Admin</a>
 			{% endif %}
 
 			<ul class="nav navbar-nav">
 				<li>
-					<a class="nav-link" href="{{path('basket')}}" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						<i class="fas fa-shopping-cart"></i> Panier
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<i class="fas fa-shopping-cart"></i>
+						Panier
 					</a>
 				</li>
 				<li class="nav-item dropdown">
@@ -31,22 +34,22 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 
-						<a class="dropdown-item" href="{{path('order')}}">
+						<a class="dropdown-item" href="#">
 							<i class="fas  fa-parachute-box"></i>
 							Mes commandes
 						</a>
 
-						<a class="dropdown-item" href="{{path('user_parameter',{id:app.user.id})}}">
+						<a class="dropdown-item" href="#">
 							<i class="fas  fa-cog"></i>
 							Paramètre
 						</a>
 						<hr/>
-						<a class="dropdown-item" href="{{path('shop_index')}}">
+						<a class="dropdown-item" href="#">
 							<i class="fas  fa-store"></i>
 							Ma boutique
 						</a>
 						<hr/>
-						<a class="dropdown-item" href="{{path('app_logout')}}">
+						<a class="dropdown-item" href="#">
 							<i class="fas  fa-sign-out-alt"></i>
 							Deconnexion
 						</a>
@@ -54,15 +57,15 @@
 				</li>
 			</ul>
 		{% else %}
+
 			<ul class="nav navbar-nav">
-				<li class="">
+				<li class="mr-2">
 					<a href="{{ path('app_register')}}">Inscription
 					</a>
 				</li>
-			</ul>
-			<ul class="nav navbar-nav">
+
 				<li class="">
-					<a href="{{ path('app_login')}}">Login</a>
+					<a href="{{ path('app_login')}}">Login</a><li/>
 				</li>
 			</ul>
 		{% endif %}

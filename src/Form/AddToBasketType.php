@@ -26,7 +26,7 @@ class AddToBasketType extends AbstractType
             ->add('add', SubmitType::class, [
                 'label' => "Ajouter au panier",
                 'attr' => [
-                    'class' => "form-control btn primaryColor text-white"
+                    'class' => "form-control btn primaryButton"
                 ]
             ]);
     }

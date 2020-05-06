@@ -60,12 +60,12 @@
 
 					</div>
 					<div>
-						{{ render(controller(
-        'App\\Controller\\BasketController::basketWidget'
-    )) }}
-						<button class="form-control btn primaryColor text-white mt-3">Commander
+						<div class="mb-4">
+							{{ render(controller('App\\Controller\\BasketController::basketWidget')) }}
+						</div>
+						<a href="{{path('basket')}}" class="form-control btn primaryButton">Voir votre panier
 							<i class=" fas fa-shopping-cart"></i>
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>

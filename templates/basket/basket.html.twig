@@ -8,9 +8,9 @@
 		<h2>Votre panier<h2></div>
 			<div class="row">
 				<div class="col-md-9">
-					<form method="POST" action="{{ path('basket_all_delete')}}" onsubmit="return confirm('Voulez vous vraiment vider le panier?');">
+					<form method="POST" class="mb-4"action="{{ path('basket_all_delete')}}" onsubmit="return confirm('Voulez vous vraiment vider le panier?');">
 						<input type="hidden" name="_method" value="POST">
-						<button class="btn">
+						<button type='submit' class="btn btn-sm btn-warning">
 							vider le panier
 						</button>
 					</form>

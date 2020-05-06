@@ -16,7 +16,7 @@ class ConfirmOrdersType extends AbstractType
                 'confirmOrder',
                 SubmitType::class,
                 ['label' => 'Confirmer la commande',
-                'attr'=>['class'=>'btn btn-warning form-control mt-3']]
+                'attr'=>['class'=>'btn primaryButton form-control mt-3']]
             );
     }
 

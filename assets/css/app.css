@@ -54,12 +54,12 @@ body {
 
 .primaryButton {
     background-color: var(--main-bg-color);
-    color: white;
+    color: white !important;
 }
 
 .primaryButton:active, .primaryButton:focus, .primaryButton:hover {
     background-color: var(--secondary-bg-color);
-    color: white;
+    color: white ;
 }
 
 .mainButton {

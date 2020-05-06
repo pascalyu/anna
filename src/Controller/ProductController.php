@@ -77,6 +77,7 @@ class ProductController extends AbstractController
             $basketRow->setProduct($product);
             $entityManager->persist($basketRow);
             $entityManager->flush();
+            return $this->redirectToRoute("product_custom_show", ['id' => $product->getId()]);
         }
         return $this->render('product/product.html.twig', [
             'product' => $product,

@@ -8,13 +8,20 @@
 		<div class="col-md-2">
 			<div class="border-right mt-3 pr-3">
 				{{ form_start(form) }}
-				<button type="button" class="btn">
-					<a href='{{path('home')}}'>
-						<i class="fas fa-sync"></i>
-					</a>
-				</button>
-				{{ form_widget(form) }}
 
+				{{ form_row(form.searchbar) }}
+				{{ form_row(form.category) }}
+				Prix
+				<div class="row  m-0 mb-4 ">
+					<div class="col-md-6 p-0 pr-1">
+						{{ form_widget(form.minPrice) }}
+					</div>
+					<div class="col-md-6  p-0 pl-1">
+						{{ form_widget(form.maxPrice) }}
+					</div>
+				</div>
+				{{ form_rest(form) }}
+				<a href="{{path('home')}}">Filtre par défaut</a>
 				{{ form_end(form) }}
 			</div>
 		</div>

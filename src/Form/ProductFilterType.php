@@ -8,6 +8,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\SearchType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,23 +17,34 @@ class ProductFilterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('searchbar', SearchType::class, ['label' => "recherche", 'required' => false])
+            ->add('searchbar', SearchType::class, ['label' => "Recherche", 'required' => false])
             ->add(
                 'category',
                 EntityType::class,
                 [
-                    'label' => 'catégorie',
+                    'label' => 'Catégorie',
                     'placeholder' => "Tout",
                     'class' => Category::class,
                     'choice_label' => 'name',
                     'choice_value' => 'id', 'required' => false
                 ]
             )
-            ->add('minPrice', MoneyType::class, ['label' => 'Prix min', 'required' => false])
-            ->add('maxPrice', MoneyType::class, ['label' => 'Prix max', 'required' => false])
+            ->add('minPrice', MoneyType::class, [
+                'label' => false,
+                'currency' => false,
+                'required' => false,
+                'attr' => ['placeholder' => 'Min €','class'=>'']
+            ])
+            ->add('maxPrice', MoneyType::class, [
+                'label' => false,
+                'currency' => false,
+                'required' => false,
+                'attr' => ['placeholder' => 'Max €','class'=>'']
+            ])
             ->add('rechercher', SubmitType::class, [
-                'attr' => ['class' => 'form-control btn btn-primary'],
-            ]);;
+                'label' => 'Rechercher',
+                'attr' => ['class' => 'form-control btn primaryColor text-white'],
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

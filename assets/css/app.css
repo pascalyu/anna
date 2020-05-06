@@ -52,6 +52,10 @@ body {
     background-color: var(--main-bg-color);
 }
 
+.secondaryColor {
+    background-color: var(--secondary-bg-color);
+}
+
 .primaryButton {
     background-color: var(--main-bg-color);
     color: white !important;
@@ -74,10 +78,6 @@ body {
     color: var(--secondary-bg-color);
 }
 
-.secondaryColor {
-    background-color: var(--secondary-bg-color);
-}
-
 .borderSecondaryColor {
     border-color: var(--secondary-bg-color) !important;
 }
@@ -88,6 +88,10 @@ body {
 
 .navbar a {
     color: white;
+}
+.dropdown-menu-anna a{
+
+    color: var(--main-bg-color) !important;
 }
 
 .navbar a:hover {

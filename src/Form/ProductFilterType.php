@@ -43,7 +43,7 @@ class ProductFilterType extends AbstractType
             ])
             ->add('rechercher', SubmitType::class, [
                 'label' => 'Rechercher',
-                'attr' => ['class' => 'form-control btn primaryColor text-white'],
+                'attr' => ['class' => 'form-control btn primaryButton text-white'],
             ]);
     }
 

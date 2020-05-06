@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: #41B3A3;
     --secondary-bg-color: #b34151;
+    --own-black-color: #567;
 }
 
 html {
@@ -11,7 +12,7 @@ html {
 body {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
-    color: #567;
+    color: var(--own-black-color);
     margin: 0;
     padding: 0;
     margin-bottom: 150px;
@@ -54,6 +55,23 @@ body {
 .primaryButton {
     background-color: var(--main-bg-color);
     color: white;
+}
+
+.primaryButton:active, .primaryButton:focus, .primaryButton:hover {
+    background-color: var(--secondary-bg-color);
+    color: white;
+}
+
+.mainButton {
+    border-radius: 0.25rem !important;
+    border-color: var(--own-black-color);
+    border: 1;
+    color: var(--own-black-color);
+}
+
+.mainButton:hover {
+    border-color: var(--secondary-bg-color);
+    color: var(--secondary-bg-color);
 }
 
 .secondaryColor {

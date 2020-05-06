@@ -51,6 +51,11 @@ body {
     background-color: var(--main-bg-color);
 }
 
+.primaryButton {
+    background-color: var(--main-bg-color);
+    color: white;
+}
+
 .secondaryColor {
     background-color: var(--secondary-bg-color);
 }
@@ -69,6 +74,7 @@ body {
 
 .navbar a:hover {
     color: var(--secondary-bg-color);
+    border-color: var(--secondary-bg-color) !important;
 }
 
 .footer div {

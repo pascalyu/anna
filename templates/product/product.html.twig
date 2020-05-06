@@ -40,30 +40,36 @@
 							<div>{{product.description}}</div>
 						</div>
 						<hr/>
-
-						{{form_start(addToBasketform)}}
-						{{form_end(addToBasketform)}}
-
+						{% if app.user %}
+							{{form_start(addToBasketform)}}
+							{{form_end(addToBasketform)}}
+						{% else %}
+							<a href="{{ path('app_login')}}">Veuillez vous connecter pour acheter</a>
+							ou bien
+							<a href="{{ path('app_register')}}">Vous inscrire</a>
+						{% endif %}
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-3">
-			<div class="border border-dark rounded p-1">
-				<div style="text-align:center">
-					<h3>Panier</h3>
+		{% if app.user %}
+			<div class="col-md-3">
+				<div class="border border-dark rounded p-1">
+					<div style="text-align:center">
+						<h3>Panier</h3>
 
-				</div>
-				<div>
-					{{ render(controller(
+					</div>
+					<div>
+						{{ render(controller(
         'App\\Controller\\BasketController::basketWidget'
     )) }}
-					<button class="form-control btn primaryColor text-white mt-3">Commander
-						<i class=" fas fa-shopping-cart"></i>
-					</button>
+						<button class="form-control btn primaryColor text-white mt-3">Commander
+							<i class=" fas fa-shopping-cart"></i>
+						</button>
+					</div>
 				</div>
 			</div>
-		</div>
+		{% endif %}
 
 	</div>
 {% endblock %}

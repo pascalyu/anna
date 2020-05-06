@@ -71,7 +71,9 @@ class ProductController extends AbstractController
         $addToBasketform->handleRequest($request);
         if ($addToBasketform->isSubmitted()) {
             $entityManager = $this->getDoctrine()->getManager();
-
+            if (!$this->getUser()) {
+                return $this->redirectToRoute("app_login");
+            }
             $basketRow->setUser($this->getUser());
             $basketRow->setPrice($product->getPrice() * $basketRow->getQuantity());
             $basketRow->setProduct($product);

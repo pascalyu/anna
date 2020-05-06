@@ -16,12 +16,18 @@ class AddToBasketType extends AbstractType
         $builder
             ->add('quantity', IntegerType::class, [
                 'label' => "Combien vous en voulez ?",
-                'attr' => ['class' => "form-control"]
+                'empty_data' => '0',
+                'attr' => [
+                    'min' => '0',
+                    'value' => '0'
+                ]
 
             ])
             ->add('add', SubmitType::class, [
                 'label' => "Ajouter au panier",
-                'attr' => ['class' => "form-control btn btn-warning"]
+                'attr' => [
+                    'class' => "form-control btn primaryColor text-white"
+                ]
             ]);
     }
 

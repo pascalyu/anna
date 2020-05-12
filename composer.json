@@ -5,6 +5,7 @@
         "php": "^7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "easycorp/easyadmin-bundle": "^2.3",
         "liip/imagine-bundle": "^2.3",
         "ocramius/ocramius": "^1.1@dev",
         "ocramius/package-versions": "^1.8",

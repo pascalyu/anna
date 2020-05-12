@@ -70,6 +70,10 @@ class User implements UserInterface
         $this->orders = new ArrayCollection();
         $this->baskets = new ArrayCollection();
     }
+    public function __toString()
+    {
+        return $this->email;
+    }
 
     public function getId(): ?int
     {

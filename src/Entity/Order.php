@@ -64,6 +64,10 @@ class Order
     {
         $this->orderProduct = new ArrayCollection();
     }
+    public function __toString()
+    {
+        return $this->code_number;
+    }
 
     public function getId(): ?int
     {

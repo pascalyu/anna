@@ -5,9 +5,12 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
+ * @Vich\Uploadable
  */
 class Product
 {
@@ -57,7 +60,10 @@ class Product
     {
         $this->pictures = new ArrayCollection();
     }
-
+    public function __toString()
+    {
+        return $this->name;
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -143,6 +149,16 @@ class Product
             return new Picture();
         }
         return $this->pictures[0];
+    }
+
+
+
+    public function getMainPictureFile()
+    {
+        if (count($this->getPictures()) <= 0) {
+            return new Picture();
+        }
+        return $this->pictures[0]->getImageFile();
     }
     /**
      * @return Collection|Picture[]

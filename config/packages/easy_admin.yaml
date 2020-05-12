@@ -1,0 +1,41 @@
+easy_admin:
+  design:
+    brand_color: "#41B3A3"
+  entities:
+    Product:
+      class: App\Entity\Product
+      form:
+        fields:
+          - { property: "name", type: "text", label: "Nom du produit" }
+          - { property: "description", type: "textarea", label: "Description" }
+          - { property: "price", type: "text", label: "Prix" }
+          - property: "pictures"
+            type: "collection"
+            type_options:
+              entry_type: App\Form\PictureType
+
+    User:
+      class: App\Entity\User
+      form:
+        fields:
+          - property: email
+          - password
+          - property: "billing_address"
+            type: App\Form\AddressType
+          - property: "shipping_address"
+            type: App\Form\AddressType
+      new:
+        fields:
+          - password
+      edit:
+        fields:
+          - "-password"
+
+    Category:
+      class: App\Entity\Category
+    Address:
+      class: App\Entity\Address
+    Basket:
+      class: App\Entity\Basket
+    Order:
+      class: App\Entity\Order

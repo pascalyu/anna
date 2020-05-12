@@ -31,6 +31,8 @@ class Basket
      */
     private $product;
 
+
+    
     /**
      * @ORM\Column(type="integer")
      */
@@ -39,6 +41,11 @@ class Basket
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function __toString()
+    {
+        return $this->id . "basket";
     }
 
     public function getPrice(): ?string

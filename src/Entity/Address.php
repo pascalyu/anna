@@ -52,6 +52,10 @@ class Address
     {
         return $this->id;
     }
+    public function __toString()
+    {
+        return $this->city;
+    }
 
     public function getName(): ?string
     {

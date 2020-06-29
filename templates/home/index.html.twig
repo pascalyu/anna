@@ -5,7 +5,7 @@
 
 {% block body %}
 	<div class="row">
-		<div class="col-md-2">
+		<div class="col-md-2 col-sm-12">
 			<div class="border-right mt-3 pr-3">
 				{{ form_start(form) }}
 
@@ -13,10 +13,10 @@
 				{{ form_row(form.category) }}
 				Prix
 				<div class="row  m-0 mb-4 ">
-					<div class="col-md-6 p-0 pr-1">
+					<div class="col-md-6 p-0 col-sm-12">
 						{{ form_widget(form.minPrice) }}
 					</div>
-					<div class="col-md-6  p-0 pl-1">
+					<div class="col-md-6  p-0 col-sm-12">
 						{{ form_widget(form.maxPrice) }}
 					</div>
 				</div>
@@ -25,9 +25,9 @@
 				{{ form_end(form) }}
 			</div>
 		</div>
-		<div class="row col-md-10">
+		<div class="row col-md-10 col-sm-12">
 			{% for product in products %}
-				<div class="col-md-3 mt-3 ">
+				<div class="col-md-3 mt-3 col-sm-12 ">
 					<div class="card card-to-hover">
 
 						<a href="{{path('product_custom_show',{'id': product.id})}}" class="" style="">
